@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
-
+from django.conf import settings
+from django.conf.urls.static import static
 from tegridy.views import home, about, reviews
 
 urlpatterns = [
@@ -25,6 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', about, name = 'about'),
     path('reviews/',reviews, name = 'reviews'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
