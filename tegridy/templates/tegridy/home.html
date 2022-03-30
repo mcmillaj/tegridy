@@ -1,0 +1,17 @@
+{% extends 'tegridy/main.html' %}
+
+<head>
+    {% load static %}
+    <style>
+        h1 {text-align: center;}
+    </style>
+</head>
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<img src="{% static 'logo.png' %}" width="200" height="121">
+<h1>Integrity of Colorado</h1>
+<h2>(720) 419-5937</h2>
+{% endblock %}

@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from tegridy.views import home
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+admin.autodiscover()
 
 urlpatterns = [
+    path('',home, name = 'home'),
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
