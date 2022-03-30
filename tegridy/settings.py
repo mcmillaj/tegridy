@@ -24,9 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u!gr0el!*-v@grebmy$w5%szfc_28rpg3npwrz+w+&!eqm)(n='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'tegridy.eba-v99mvarb.us-west-2.elasticbeanstalk.com',
+    '127.0.0.1']
 
 
 # Application definition
@@ -38,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tegridy'
+    'tegridy',
+    'gunicorn'
 ]
 
 MIDDLEWARE = [
@@ -107,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'US/Mountain'
 
 USE_I18N = True
 
