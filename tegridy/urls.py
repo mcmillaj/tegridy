@@ -19,12 +19,13 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 from django.conf import settings
 from django.conf.urls.static import static
-from tegridy.views import home, about, reviews
+from tegridy.views import home, about, reviews, gallery
 
 urlpatterns = [
     path('',home, name = 'home'),
     path('admin/', admin.site.urls),
     path('about/', about, name = 'about'),
+    path('gallery/', gallery, name = 'gallery'),
     path('reviews/',reviews, name = 'reviews'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

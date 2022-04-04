@@ -1,0 +1,32 @@
+{% extends 'tegridy/main.html' %}
+
+<head>
+    {% load static %}
+    <style>
+        h1 {text-align: center;}
+    </style>
+</head>
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<img src="{% static 'img/logo.jpg' %}">
+<h1 style="font-size: 45px;">(720) 419-5937</h1>
+<div class="homepics">
+    <img src="{% static 'img/IMG_1256.jpg' %}" width="620" height="480">
+    <img src="{% static 'img/IMG_1255.jpg' %}" width="620" height="480">
+</div>
+<div class="homepics">
+    <img src="{% static 'img/IMG_1140.jpg' %}"width="620" height="480">
+    <img src="{% static 'img/IMG_1145.jpg' %}"width="620" height="480">
+</div>
+<div class="homepics">
+    <img src="{% static 'img/IMG_1146.jpg' %}"width="620" height="480">
+    <img src="{% static 'img/IMG_1147.jpg' %}"width="620" height="480">
+</div>
+<div class="homepics">
+    <img src="{% static 'img/IMG_1150.jpg' %}"width="620" height="480">
+    <img src="{% static 'img/IMG_4227.jpg' %}"width="620" height="480">
+</div>
+{% endblock %}

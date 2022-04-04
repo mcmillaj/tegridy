@@ -9,3 +9,6 @@ def reviews(request):
 
 def about(request):
     return render(request, 'tegridy/about.html', {})
+
+def gallery(request):
+    return render(request, 'tegridy/gallery.html', {})
